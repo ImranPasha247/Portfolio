@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+#logo {
+  max-width: 100%; 
+  width: clamp(150px, 30vw, 300px);
+  height: auto; 
+  margin: -20px 0; 
+  object-fit: contain; 
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 1%; 
+  background-color: #1e1e1e;
+  flex-wrap: wrap;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: clamp(1rem, 5vw, 2rem); /* Scales dynamically */
+}
+
+.navbar a {
+  color: #f1f1f1;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: clamp(0.8rem, 2.5vw, 1.2rem); /* Adjusts based on screen width */
+}
+.navbar a:hover {
+  color: #00aaff;
+}
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: #f1f1f1;
+  cursor: pointer;
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+.theme-toggle i {
+  pointer-events: none;
+}
+/* Home Section */
+.home-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+  padding: 0 5%;
+}
+.profile-picture {
+  max-width: 35%;
+  width: 28%;
+  height: auto;
+  border-radius: 50%;
+  margin:20px 0px 20px 0px;
+  object-fit: cover;
+  border: 3px solid #00aaff;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 5% 5%;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adapts column count */
+  gap: 2%;
+}
+
+.project-card {
+  background-color: #292929;
+  padding: 10%;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.project-card:hover {
+  background-color: #00aaff;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 5% 5%;
+  text-align: center;
+}
+
+/* Light Mode */
+body.light-mode {
+  background-color: #f1f1f1;
+  color: #121212;
+}
+
+body.light-mode .navbar {
+  background-color: #ffffff;
+}
+
+body.light-mode a {
+  color: #121212;
+}
+
+body.light-mode .project-card {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+body.light-mode .project-card:hover {
+  background-color: #00aaff;
+}
+body.light-mode #theme-icon {
+  color: #000000; 
+}
+/* Text Scaling */
+h1, h2 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+p, a, .project-card h3 {
+  font-size: clamp(1rem, 2.5vw, 1.2rem); 
+}

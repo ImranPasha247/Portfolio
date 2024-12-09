@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="profile">
+                <img src="profile.jpg" alt="Profile Picture">
+                <h1>Ahmed Khalid</h1>
+                <p>Software Engineer</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <div class="contact-info">
+                    <a href="mailto:khalid@techgulf.com">khalid@techgulf.com</a>
+                    <p>+213908539206</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <nav class="tabs">
+                <button onclick="showTab('projects')">Projects</button>
+                <button onclick="showTab('resume')">Resume</button>
+                <button onclick="showTab('contact')">Contact</button>
+            </nav>
+
+            <section id="projects" class="tab-content">
+                <h2>Projects</h2>
+                <div class="project-list">
+                    <div class="project" onclick="openProject('Pixstock - Stock Media App')">
+                        <img src="project1.jpg" alt="Project 1">
+                        <p>Pixstock - Stock Media App</p>
+                    </div>
+                    <div class="project" onclick="openProject('Cook.io - Recipe App')">
+                        <img src="project2.jpg" alt="Project 2">
+                        <p>Cook.io - Recipe App</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resume" class="tab-content hidden">
+                <h2>Resume</h2>
+                <p>Work Experience and Education</p>
+            </section>
+
+            <section id="contact" class="tab-content hidden">
+                <h2>Contact</h2>
+                <p>Feel free to reach out via email or phone.</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
