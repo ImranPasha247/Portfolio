@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #e3edf7;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-container {
+    display: flex;
+    gap: 20px;
+}
+
+.skill {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    text-align: center;
+}
+
+.outer {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    padding: 20px;
+}
+
+.inner {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7);
+}
+
+#number-html, #number-css, #number-js {
+    font-weight: bold;
+    font-size: 18px;
+    color: #555;
+}
+
+circle {
+    fill: none;
+    stroke-width: 20px;
+    stroke-dasharray: 472; /* Circumference of the circle */
+    stroke-dashoffset: 472; /* Initially hidden */
+    transition: stroke-dashoffset 0.3s linear;
+}
+
+circle#circle-html {
+    stroke: url(#GradientColor-html);
+}
+
+circle#circle-css {
+    stroke: url(#GradientColor-css);
+}
+
+circle#circle-js {
+    stroke: url(#GradientColor-js);
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

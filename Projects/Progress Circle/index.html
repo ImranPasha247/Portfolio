@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="skills-container">
+        <!-- HTML Progress Bar -->
+        <div class="skill">
+            <div class="outer">
+                <div class="inner">
+                    <div id="number-html">0%</div>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                <defs>
+                    <linearGradient id="GradientColor-html">
+                        <stop offset="0%" stop-color="#e91e63" />
+                        <stop offset="100%" stop-color="#673ab7" />
+                    </linearGradient>
+                </defs>
+                <circle id="circle-html" cx="80" cy="80" r="70" stroke-linecap="round"></circle>
+            </svg>
+            <h2>HTML</h2>
+        </div>
+
+        <!-- CSS Progress Bar -->
+        <div class="skill">
+            <div class="outer">
+                <div class="inner">
+                    <div id="number-css">0%</div>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                <defs>
+                    <linearGradient id="GradientColor-css">
+                        <stop offset="0%" stop-color="#42a5f5" />
+                        <stop offset="100%" stop-color="#1976d2" />
+                    </linearGradient>
+                </defs>
+                <circle id="circle-css" cx="80" cy="80" r="70" stroke-linecap="round"></circle>
+            </svg>
+            <h2>CSS</h2>
+        </div>
+
+        <!-- JavaScript Progress Bar -->
+        <div class="skill">
+            <div class="outer">
+                <div class="inner">
+                    <div id="number-js">0%</div>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                <defs>
+                    <linearGradient id="GradientColor-js">
+                        <stop offset="0%" stop-color="#fdd835" />
+                        <stop offset="100%" stop-color="#ff9800" />
+                    </linearGradient>
+                </defs>
+                <circle id="circle-js" cx="80" cy="80" r="70" stroke-linecap="round"></circle>
+            </svg>
+            <h2>JavaScript</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
