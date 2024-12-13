@@ -3,25 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Imran Pasha Sinha">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
+  
   <header>
     <div id="logo">
       <img src="img/logo1.svg" alt="Logo">
     </div>
   </header>
-
   <!-- Main Content Section -->
   <main class="main-content">
     <!-- Profile Section -->
+     <!-- Profile pic -->
     <section id="home" class="home-section">
       <div class="profile-container">
         <div class="profile-left">
           <img src="img/profilepic.svg" alt="Profile" class="profile-picture">
         </div>
+        <!-- Names & Info -->
         <div class="profile-right">
           <h2>Imran Pasha Sinha</h2>
           <p>A passionate software engineer with a background in Computer Science.</p>
@@ -33,8 +36,9 @@
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Navigation Section & About Me Section -->
     <div class="merge">
+      <!-- About Section -->
       <div class="about-section">
           <h3>About Me</h3>
           <p>A passionate software engineer with a strong background in Computer Science.</p>
@@ -43,55 +47,67 @@
           <p><strong>Company:</strong>Dark Agent</p>
           <p><strong>Website:</strong> <a href="https://youtube.com/@imranslu?si=TaroKhX8VxBhEUgU" target="_blank">@IMRANsLU</a></p>
       </div>
-      
+      <!-- Navigation Section Start -->
         <nav class="nav">
-          <button id="projects-btn" class="nav-button">Projects</button>
-          <button id="resume-btn" class="nav-button">Resume</button>
-          <button id ="contact-btn"class="nav-button">Contact</button>
-          <button id="theme-toggle" class="theme-toggle">
+          <button id="projects-btn" class="nav-button">Projects</button> <!-- Projects Button -->
+          <button id="resume-btn" class="nav-button">Resume</button> <!-- Resume Button -->
+          <button id ="contact-btn"class="nav-button">Contact</button> <!-- Contact Button -->
+          <!-- Theme Toggle Button -->
+          <button id="theme-toggle" class="theme-toggle"> 
             <i id="theme-icon" class="fas fa-moon"></i>
           </button>
+
           <!-- Project Section Start -->
           <section id="projects" class="projects-section" >
-            <div class="projects-grid">
-              <div class="project-card">
-                <a href="#">
-                <img src="img/tic-tac-toe.jpg" alt="Tic-Tac-Toe">
-                <h3>Tic-Tac-Toe</h3>
-              </a>
+              <div class="projects-grid">
+                <!-- Tic-Tac-Toe -->
+                <div class="project-card">
+                  <a href="https://imranpasha247.github.io/Portfolio/Projects/Tic-tac-toe/" target="_blank">
+                  <img src="img/tic-tac-toe.jpg" alt="Tic-Tac-Toe">
+                  <h3>Tic-Tac-Toe</h3>
+                </a>
+                </div>
+                <!-- Calculator -->
+                <div class="project-card">
+                  <a href="https://imranpasha247.github.io/Portfolio/Projects/calculator/" target="_blank">
+                  <img src="img/calculator.jpg" alt="calculator">
+                  <h3>calculator</h3>
+                </a>
+                </div>
+                <!-- Text-To-Speech -->
+                <div class="project-card">
+                  <a href="https://imranpasha247.github.io/Portfolio/Projects/Text-To-Speech%20Converter/" target="_blank">
+                  <img src="img/Text-To-Speech.png" alt="Text-To-Speech">
+                  <h3>Text To Speech Converter</h3></a>
+                </div>
+                <div class="project-card">
+                  <a href="https://imranpasha247.github.io/Portfolio/Projects/Age-Calculator/">
+                  <img src="img/age-caclulator.jpg" alt="age-calculator">
+                  <h3>Age Calculator</h3>
+                </a>
+                </div>
+                <!-- QR Code Generator -->
+                <div class="project-card">
+                  <a href="https://imranpasha247.github.io/Portfolio/Projects/QR%20Code%20Generator/" target="_blank">
+                  <img src="img/Qr-code.jpg" alt="Qr-code">
+                  <h3>QR Code Generator</h3>
+                </a>
+                </div>
+                <!-- Progress Circle -->
+                <div class="project-card">
+                  <a href="https://imranpasha247.github.io/Portfolio/Projects/Progress%20Circle/" target="_blank">
+                  <img src="img/Progress Bar.jpg" alt="Progress Bar">
+                  <h3>Progress Bar</h3>
+                </a>
+                </div>
               </div>
-              <div class="project-card">
-                <a href="">
-                <img src="img/calculator.jpg" alt="calculator">
-                <h3>calculator</h3>
-              </a>
-              </div>
-              <div class="project-card">
-                <a href="">
-                <img src="img/Text-To-Speech.png" alt="Text-To-Speech">
-                <h3>Text To Speech Converter</h3></a>
-              
-              </div>
-              <div class="project-card">
-                <a href="">
-                <img src="img/age-caclulator.jpg" alt="age-calculator">
-                <h3>Age Calculator</h3>
-              </a>
-              </div>
-
-              <div class="project-card">
-                <a href="">
-                <img src="img/Qr-code.jpg" alt="Qr-code">
-                <h3>QR Code Generator</h3>
-              </a>
-              </div>
-            </div>
           </section>
           <!-- Project Section End -->
 
 
           <!-- Resume Section Start -->
           <div id="resume">
+            <!-- Experience Section Start -->
             <section>
               <h2>Experience</h2>
               <div class="experience">
@@ -107,7 +123,7 @@
                 </div>
               </div>
             </section>
-        
+            <!-- Education Section Start -->
             <section>
               <h2>Education</h2>
               <div class="education">
@@ -130,10 +146,9 @@
                 </div>
               </div>
             </section>
-        
+        <!-- Skill Section Start -->
             <section>
               <h2>Skills and Technologies</h2>
-            
               <div class="skills-container">
                 <!-- HTML Progress Bar -->
                 <div class="skill">
@@ -150,7 +165,6 @@
                         <div id="number-html">0%</div>
                         <h2>HTML</h2>
                     </div>
-                    
                 </div>
 
                 <!-- CSS Progress Bar -->
@@ -168,7 +182,6 @@
                         <div id="number-css">0%</div>
                         <h2>CSS</h2>
                     </div>
-                    
                 </div>
 
                 <!-- JavaScript Progress Bar -->
@@ -185,17 +198,13 @@
                     <div class="inner">
                         <div id="number-js">0%</div>
                         <h2 id="js">JavaScript</h2>
-                    </div>
-                    
+                    </div> 
                 </div>
             </div>
-
-
-
-
             </section>
           </div>
           <!-- Resume Section End -->
+
           <!-- Contact Section Start -->
           <section id="contact-section">
             <h1>Contact</h1>
@@ -207,12 +216,12 @@
                 <p><strong>Address:</strong>Chittagong, Bangladesh</p>
                 <h3>Social Info</h3>
                 <div class="social-icons">
-                  <a href="https://youtube.com/@imranslu?si=TaroKhX8VxBhEUgU"><img src="img/Youtube.svg" alt="Youtube"></a>
-                  <a href="https://www.linkedin.com/in/imran-pasha-332665328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="img/Linkedin.svg" alt="LinkedIn"></a>
-                  <a href="#"><img src="img/Github.svg" alt="Instagram"></a>
+                  <a href="https://youtube.com/@imranslu?si=TaroKhX8VxBhEUgU" target="_blank"><img src="img/Youtube.svg" alt="Youtube" ></a>
+                  <a href="https://www.linkedin.com/in/imran-pasha-332665328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="img/Linkedin.svg" alt="LinkedIn" ></a>
+                  <a href="https://github.com/ImranPasha247" target="_blank"><img src="img/Github.svg" alt="GitHub"></a>
                 </div>
               </div>
-      
+              <!-- Form -->
               <form class="contact-form">
                 <h3>Let's Work Together</h3>
                 <input type="text" name="name" placeholder="Name*" required>
@@ -224,11 +233,15 @@
             </div>
           </section>
           <!-- Contact Section End -->
-
         </nav>
     </div>
   </main>
 
+  <!-- Footer -->
+  <footer>
+  
+    <p>&copy; 2024 Imran Pasha Sinha. All Rights Reserved.</p>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
