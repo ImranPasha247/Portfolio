@@ -423,10 +423,6 @@ body.dark-mode .skills span {
       margin-right: 0.5rem;
     }
 
-
-
-
-
 /* Responsive Footer */
 @media (max-width: 768px) {
   footer {
@@ -438,12 +434,6 @@ body.dark-mode .skills span {
     font-size: 0.6rem; /* Even smaller text on very small screens */
   }
 }
-
-
-
-
-
-
 
 /* Progress Bar */
 .skills-container {
