@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 /* General Styles */
 body {
   margin: 0;
@@ -5,45 +8,15 @@ body {
   background-color: #121212; /* Dark background */
   color: #f1f1f1; /* Light text for dark mode */
 }
-
-* {
-  box-sizing: border-box;
+/* Mode of Body */
+body.light-mode {
+  background-color: #f1f1f1;
+  color: #121212; 
 }
-
-a {
-  text-decoration: none;
-  color: #f1f1f1;
-}
-
-a:hover {
-  color: #00aaff;
-}
-
-/* Navbar */
-.nav {
-  width: 100%;
-  align-content: flex-start;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px 20px;
-  position: relative;
-  top: 8px;
-}
-
-#logo img {
-  max-width: 100%;
-  height: auto;
-  max-width: 120px;
-  height:80px;
-}
-
 /* Main Content */
 .main-content {
   padding: 20px;
 }
-
 /* Home Section */
 .home-section {
   display: flex;
@@ -57,67 +30,57 @@ a:hover {
   align-items: center;
   gap: 30px;
 }
-
-.profile-left {
-  flex: 0 0 20%;
+#logo img {
+  max-width: 100%;
+  height: auto;
+  max-width: 120px;
+  height:80px;
 }
-
 .profile-picture {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   border: 3px solid #00aaff;
 }
-
+.profile-left {
+  flex: 0 0 20%;
+}
 .profile-right {
   text-align: left;
   max-width: 600px;
 }
-
 .profile-right h2 {
   font-size: 2rem;
 }
-
 .profile-right p {
   font-size: 1.2rem;
 }
 
-.contact-info p {
+.Profile-contact-info p {
   font-size: 1rem;
 }
 
-/* About Section */
-.about-section {
-  display: block;
-  margin-top: 50px;
-  padding: 20px; /* Adjust padding for smaller screens */
-  font-size: 1.2rem;
-  width: 50%; /* Allow the section to take full width */
-  max-width: none; /* Remove the fixed max-width */
-  border-radius: 10px;
-  background-color: #fcfcfc; /* Default light mode background */
-  color: #121212; /* Default dark text for light mode */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+/* Merge */
+.merge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-/* Make the About Section more responsive on smaller screens */
-@media (max-width: 768px) {
-  .about-section {
-    margin-left: 20px; /* Adjust left margin for smaller screens */
-    margin-right: 20px; /* Adjust right margin */
-    font-size: 1rem; /* Reduce font size for smaller screens */
-  }
+/* Navbar */
+.nav {
+  width: 100%;
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+  top: 8px;
 }
-
-@media (max-width: 480px) {
-  .about-section {
-    padding: 15px; /* Reduce padding for even smaller screens */
-    font-size: 0.9rem; /* Smaller text on very small screens */
-  }
-
-  .about-section h3 {
-    font-size: 1.5rem; /* Make the heading size smaller on small screens */
-  }
+a {
+  text-decoration: none;
+  color: #f1f1f1;
 }
 
 /* Navigation Buttons */
@@ -133,11 +96,28 @@ a:hover {
   text-transform: uppercase;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
-
 .nav-button:focus {
   outline: none;
   box-shadow: none; /* Disable the full box shadow */
   border-bottom: 2px solid #00aaff; /* Apply the focus effect to the bottom */
+}
+/* Buttons Mode settings */
+body.light-mode .nav-button {
+  background-color: #f1f1f1; 
+  color: #060000; 
+}
+body.dark-mode .nav-button {
+  background-color: #121212; /* Dark background for buttons */
+  color: #f1f1f1; /* Light text */
+}
+body.light-mode .nav-button:hover {
+  background-color: #e5e3e3; 
+  color: #000000; /* Light text on hover */
+}
+body.dark-mode .nav-button:hover {
+  background-color: #403e3e; /* Highlighted background on hover */
+  color: #ffffff; /* Dark text on hover */
+  border-color: #f1f1f1; /* Light border on hover */
 }
 
 /* Theme Toggle Button */
@@ -149,7 +129,6 @@ a:hover {
   font-size: 1.2rem;
   transition: color 0.3s;
 }
-
 nav .nav-button{
   background: none;
   border: none;
@@ -158,82 +137,72 @@ nav .nav-button{
   font-size: 1rem;
   transition: color 0.3s;
 }
-
 .theme-toggle:hover {
   color: #00aaff;
 }
-
-/* Light Mode Adjustments */
-body.light-mode {
-  background-color: #f1f1f1; /* Light main body background for light mode */
-  color: #121212; /* Dark text for light mode */
-}
-
-body.light-mode .nav-button {
-  background-color: #f1f1f1; /* White background for buttons */
-  color: #060000; /* Dark text */
-}
-
-body.light-mode .nav-button:hover {
-  background-color: #e5e3e3; 
-  color: #000000; /* Light text on hover */
-}
-
 body.light-mode .theme-toggle {
   color: #121212; /* Dark icon for light mode */
 }
-
-body:not(.light-mode) .nav-button {
-  background-color: #121212; /* Dark background for buttons */
-  color: #f1f1f1; /* Light text */
-}
-
-body:not(.light-mode) .nav-button:hover {
-  background-color: #403e3e; /* Highlighted background on hover */
-  color: #ffffff; /* Dark text on hover */
-  border-color: #f1f1f1; /* Light border on hover */
-}
-
-body:not(.light-mode) .theme-toggle {
+body.dark-mode .theme-toggle {
   color: #f1f1f1; /* Light icon for dark mode */
 }
-
-.merge {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* About Section */
+.about-section {
+  display: block;
+  margin-top: 50px;
+  padding: 20px; /* Adjust padding for smaller screens */
+  font-size: 1.2rem;
+  width: 50%; /* Allow the section to take full width */
+  max-width: none; /* Remove the fixed max-width */
+  border-radius: 10px;
+  background-color: #fcfcfc; /* Default light mode background */
+  color: #121212; /* Default dark text for light mode */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
 }
-
-/* Adjustments for .about-section in Dark Mode */
-body:not(.light-mode) .about-section {
-  background-color: #1e1e1e; /* Dark background for about-section */
-  color: #f1f1f1; /* Light text for dark mode */
-}
-
-body:not(.light-mode) .about-section h3,
-body:not(.light-mode) .about-section p,
-body:not(.light-mode) .about-section a {
-  color: #f1f1f1; /* Light text color for better contrast in dark mode */
-}
-
-body:not(.light-mode) .about-section a:hover {
-  color: #00aaff; /* Blue color for links on hover */
-}
-
+/* Mode Settings of About Section */
 body.light-mode .about-section {
   background-color: #fcfcfc; /* Light background for about-section */
   color: #121212; /* Dark text for light mode */
 }
-
+body:not(.light-mode) .about-section {
+  background-color: #1e1e1e;
+  color: #f1f1f1; 
+}
 body.light-mode .about-section h3,
 body.light-mode .about-section p,
 body.light-mode .about-section a {
-  color: #121212; /* Dark text color for light mode */
+  color: #121212; 
 }
-
+body:not(.light-mode) .about-section h3,
+body:not(.light-mode) .about-section p,
+body:not(.light-mode) .about-section a {
+  color: #f1f1f1; 
+}
 body.light-mode .about-section a:hover {
   color: #00aaff; /* Blue color for links on hover */
 }
+body:not(.light-mode) .about-section a:hover {
+  color: #00aaff; /* Blue color for links on hover */
+}
+/* To response the about-section */
+@media (max-width: 768px) {
+  .about-section {
+    margin-left: 20px; /* Adjust left margin for smaller screens */
+    margin-right: 20px; /* Adjust right margin */
+    font-size: 1rem; /* Reduce font size for smaller screens */
+  }
+}
+@media (max-width: 480px) {
+  .about-section {
+    padding: 15px; /* Reduce padding for even smaller screens */
+    font-size: 0.9rem; /* Smaller text on very small screens */
+  }
+  .about-section h3 {
+    font-size: 1.5rem; /* Make the heading size smaller on small screens */
+  }
+}
+
+
 
 /* Projects Section (Initially Hidden) */
 .projects-section {
@@ -255,14 +224,14 @@ body.light-mode .about-section a:hover {
 }
 
 .project-card {
-  background-color: #292929; /* Dark background for dark mode */
+  background-color: #292929; 
   padding: 10px 10px 0px 10px;
   border-radius: 10px;
   text-align: center;
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 .project-card a {
-  color: #f1f1f1; /* Light color for links in dark mode */
+  color: #f1f1f1; 
   text-decoration: none;
 }
 .project-card img {
@@ -285,8 +254,7 @@ body.light-mode .about-section a:hover {
 .project-card:hover {
   background-color: #00aaff; /* Blue background on hover */
 }
-
-/* Light Mode Adjustments */
+/* mode settings of Project-cards */
 body.light-mode .project-card {
   background-color: #ffffff; /* White background for light mode */
 }
@@ -297,144 +265,36 @@ body.light-mode .project-card a {
 body.light-mode .project-card a:hover {
   color: #00aaff; /* Blue color for links on hover */
 }
-
 body.light-mode .project-card:hover {
   background-color: #00aaff;
 }
 
-/* resume section */
 
 
-   /* Base styling for the resume */
+/* Resume Section (Initially Hidden) */
 #resume {
   display: none;
   margin: 20px;
   padding: 20px;
   border-radius: 5px;
 }
-
-/* Styling for sections */
-section {
+#experience-section,
+#education-section,
+#skills-section{
   margin-bottom: 30px;
 }
-
-h2 {
+#experience-section h2,
+#education-section h2,
+#skills-section h2 {
   border-bottom: 2px solid #ddd;
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
-
-/* Flexbox layout for experience and education */
 .experience, .education {
   display: flex;
   gap:30px;
 
 }
-
-/* Styling for skills section */
-.skills span {
-  display: inline-block;
-  margin: 5px;
-  padding: 10px;
-  background: #e1e1e1;
-  border-radius: 5px;
-}
-
-/* Light Mode Styles */
-body.light-mode #resume {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  color: #333;
-}
-
-body.light-mode h2 {
-  color: #444;
-  border-bottom: 2px solid #ddd;
-}
-
-body.light-mode .skills span {
-  background: #e1e1e1;
-  color: #333;
-}
-
-/* Dark Mode Styles */
-body.dark-mode #resume {
-  background: #333;
-  border: 1px solid #555;
-  color: #f5f5f5;
-}
-
-body.dark-mode h2 {
-  color: #f5f5f5;
-  border-bottom: 2px solid #555;
-}
-
-body.dark-mode .skills span {
-  background: #555;
-  color: #f5f5f5;
-}
-
-
-
-
-
-
-    /* contact  */
-    #contact-section{
-      display:none;
-    }
-.contact-container {
-      max-width: 800px;
-      margin: auto;
-      display: flex;
-    
-      gap: 2rem;
-    }
-    .contact-info, .contact-form {
-      flex: 1;
-    }
-    
-    .contact-info h3, .contact-form h3 {
-      margin-bottom: 1rem;
-    }
-    
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    
-    .contact-form button {
-      background: #6200ea;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    
-    .contact-form button:hover {
-      background: #3700b3;
-    }
-    .social-icons img {
-      width: 40px;
-      margin-right: 0.5rem;
-    }
-
-/* Responsive Footer */
-@media (max-width: 768px) {
-  footer {
-    font-size: 0.7rem; /* Smaller text on smaller screens */
-  }
-}
-@media (max-width: 480px) {
-  footer {
-    font-size: 0.6rem; /* Even smaller text on very small screens */
-  }
-}
-
 /* Progress Bar */
 .skills-container {
   display: flex; /* Display the skill elements horizontally */
@@ -443,7 +303,6 @@ body.dark-mode .skills span {
   justify-content: center; /* Center the container horizontally */
   gap: 20px; /* Consistent spacing between the circles */
 }
-
 /* Skill Circle */
 .skill {
   width: 160px;
@@ -451,11 +310,10 @@ body.dark-mode .skills span {
   position: relative;
   text-align: center;
   display: flex;
-  flex-direction: column; /* Stack the circle and text vertically */
-  align-items: center; /* Center everything inside the .skill div */
-  justify-content: center; /* Center items inside */
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
 }
-
 /* Inner Circle (percentage text container) */
 .inner {
   position: absolute;
@@ -468,7 +326,6 @@ body.dark-mode .skills span {
   justify-content: center;
   z-index: 1;
 }
-
 /* Percentage Numbers */
 #number-html, #number-css, #number-js {
   font-weight: bold;
@@ -476,7 +333,6 @@ body.dark-mode .skills span {
   color: #ffffff; /* Default color for light mode */
   z-index: 2; /* Ensure percentage is above the circle */
 }
-
 /* Circle stroke and initial state */
 circle {
   fill: none;
@@ -485,17 +341,14 @@ circle {
   stroke-dashoffset: 472; /* Initially hidden */
   transition: stroke-dashoffset 0.3s linear;
 }
-
 /* HTML Circle Stroke */
 circle#circle-html {
   stroke: url(#GradientColor-html);
 }
-
 /* CSS Circle Stroke */
 circle#circle-css {
   stroke: url(#GradientColor-css);
 }
-
 /* JS Circle Stroke */
 circle#circle-js {
   stroke: url(#GradientColor-js);
@@ -510,22 +363,77 @@ circle#circle-js {
   position: absolute;
   z-index: 0;
 }
-
-.inner #js {
-  left: 43px;
-}
-
-/* SVG container styling */
-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 body.light-mode #number-html,
 body.light-mode #number-css,
 body.light-mode #number-js {
-  color: #555; /* Dark text for light mode */
+  color: #555;
 }
+/* Mode Settings of Resume Section */
+body.light-mode #resume {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  color: #333;
+}
+body.light-mode #experience-section h2,
+body.light-mode #education-section h2,
+body.light-mode #skills-section h2
+ {
+  color: #444;
+  border-bottom: 2px solid #ddd;
+}
+body.dark-mode #resume {
+  background: #333;
+  border: 1px solid #555;
+  color: #f5f5f5;
+}
+body.dark-mode #experience-section h2,
+body.dark-mode #education-section h2,
+body.dark-mode #skills-section h2 {
+  color: #f5f5f5;
+  border-bottom: 2px solid #555;
+}
+
+/* Contact Section (Initially Hidden) */
+    #contact-section{
+      display:none;
+    }
+.contact-container {
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      gap: 2rem;
+    }
+    .contact-info, .contact-form {
+      flex: 1;
+    }
+    .contact-info h3, .contact-form h3 {
+      margin-bottom: 1rem;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .contact-form button {
+      background: #6200ea;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background: #3700b3;
+    }
+    .social-icons img {
+      width: 40px;
+      margin-right: 0.5rem;
+    }
+
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -537,7 +445,6 @@ footer p {
   font-size: 14px;
   color: #555; 
 }
-
 body:not(.light-mode) footer {
   background-color: #333; 
   color: #f1f1f1;
@@ -546,6 +453,13 @@ body:not(.light-mode) footer {
 body:not(.light-mode) footer p {
   color: #f1f1f1;
 }
-
-
-
+@media (max-width: 768px) {
+  footer {
+    font-size: 0.7rem; 
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    font-size: 0.6rem;
+  }
+}
