@@ -60,12 +60,128 @@ body.light-mode {
   font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+  .profile-container {
+    gap: 0px;
+  }
+  .profile-left {
+    align-self: flex-start;
+  }
+  .profile-container {
+    flex-direction: column; 
+    width: 100%;
+    padding: 10px;
+  }
+
+  .profile-picture {
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #00aaff;
+  }
+
+  .profile-right h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  .profile-right p {
+    font-size: 1rem; 
+  }
+  .Profile-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .Profile-contact-info p {
+    display: block;
+    border: 1px solid #757879;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%; 
+    text-align: center;
+    margin: 0 ;
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+  }
+}
+
 /* Merge */
 .merge {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .merge {
+    flex-direction: column; /* Stack sections vertically */
+  }
+
+  .nav, .about-section {
+    width: 100%; 
+    margin-bottom: 10px;
+  }
+
+}
+
+/* About Section */
+.about-section {
+  display: block;
+  margin-top: 20px;
+  padding: 20px; /* Adjust padding for smaller screens */
+  font-size: 1.2rem;
+  width: 50%; /* Allow the section to take full width */
+  max-width: none; /* Remove the fixed max-width */
+  border-radius: 10px;
+  background-color: #fcfcfc; /* Default light mode background */
+  color: #121212; /* Default dark text for light mode */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+}
+/* Mode Settings of About Section */
+body.light-mode .about-section {
+  background-color: #fcfcfc; /* Light background for about-section */
+  color: #121212; /* Dark text for light mode */
+}
+body:not(.light-mode) .about-section {
+  background-color: #1e1e1e;
+  color: #f1f1f1; 
+}
+body.light-mode .about-section h3,
+body.light-mode .about-section p,
+body.light-mode .about-section a {
+  color: #121212; 
+}
+body:not(.light-mode) .about-section h3,
+body:not(.light-mode) .about-section p,
+body:not(.light-mode) .about-section a {
+  color: #f1f1f1; 
+}
+body.light-mode .about-section a:hover {
+  color: #00aaff; /* Blue color for links on hover */
+}
+body:not(.light-mode) .about-section a:hover {
+  color: #00aaff; /* Blue color for links on hover */
+}
+/* To response the about-section */
+@media (max-width: 768px) {
+  .about-section {
+    width:100%;
+    margin-left: 5px; /* Adjust left margin for smaller screens */
+    margin-right: 5px; /* Adjust right margin */
+    font-size: 1rem; /* Reduce font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    width:100%;
+    padding: 15px; /* Reduce padding for even smaller screens */
+    font-size: 0.9rem; /* Smaller text on very small screens */
+  }
+  .about-section h3 {
+    font-size: 1.5rem; /* Make the heading size smaller on small screens */
+  }
+}
+
 /* Navbar */
 .nav {
   width: 100%;
@@ -74,9 +190,6 @@ body.light-mode {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10px 20px;
-  position: relative;
-  top: 8px;
 }
 a {
   text-decoration: none;
@@ -84,6 +197,12 @@ a {
 }
 
 /* Navigation Buttons */
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .nav-button {
   background-color: #1e1e1e; /* Match navbar background */
   color: #f1f1f1; /* Light text */
@@ -146,63 +265,13 @@ body.light-mode .theme-toggle {
 body.dark-mode .theme-toggle {
   color: #f1f1f1; /* Light icon for dark mode */
 }
-/* About Section */
-.about-section {
-  display: block;
-  margin-top: 50px;
-  padding: 20px; /* Adjust padding for smaller screens */
-  font-size: 1.2rem;
-  width: 50%; /* Allow the section to take full width */
-  max-width: none; /* Remove the fixed max-width */
-  border-radius: 10px;
-  background-color: #fcfcfc; /* Default light mode background */
-  color: #121212; /* Default dark text for light mode */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
-}
-/* Mode Settings of About Section */
-body.light-mode .about-section {
-  background-color: #fcfcfc; /* Light background for about-section */
-  color: #121212; /* Dark text for light mode */
-}
-body:not(.light-mode) .about-section {
-  background-color: #1e1e1e;
-  color: #f1f1f1; 
-}
-body.light-mode .about-section h3,
-body.light-mode .about-section p,
-body.light-mode .about-section a {
-  color: #121212; 
-}
-body:not(.light-mode) .about-section h3,
-body:not(.light-mode) .about-section p,
-body:not(.light-mode) .about-section a {
-  color: #f1f1f1; 
-}
-body.light-mode .about-section a:hover {
-  color: #00aaff; /* Blue color for links on hover */
-}
-body:not(.light-mode) .about-section a:hover {
-  color: #00aaff; /* Blue color for links on hover */
-}
-/* To response the about-section */
+
 @media (max-width: 768px) {
-  .about-section {
-    margin-left: 20px; /* Adjust left margin for smaller screens */
-    margin-right: 20px; /* Adjust right margin */
-    font-size: 1rem; /* Reduce font size for smaller screens */
+  .nav {
+    flex-wrap: nowrap;
   }
-}
-@media (max-width: 480px) {
-  .about-section {
-    padding: 15px; /* Reduce padding for even smaller screens */
-    font-size: 0.9rem; /* Smaller text on very small screens */
-  }
-  .about-section h3 {
-    font-size: 1.5rem; /* Make the heading size smaller on small screens */
-  }
-}
 
-
+}
 
 /* Projects Section (Initially Hidden) */
 .projects-section {
@@ -219,8 +288,9 @@ body:not(.light-mode) .about-section a:hover {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adapts to screen size */
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(250px, 1fr)); /* Two equal columns */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center-align the grid */
 }
 
 .project-card {
@@ -269,7 +339,22 @@ body.light-mode .project-card:hover {
   background-color: #00aaff;
 }
 
-
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column; 
+    gap: 15px; 
+  }
+  .projects-grid{
+   grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .projects-section {
+    width: 100%; 
+    margin: 20px 0; 
+    position: relative;
+    top: 0; 
+  }
+}
 
 /* Resume Section (Initially Hidden) */
 #resume {
@@ -391,6 +476,52 @@ body.dark-mode #education-section h2,
 body.dark-mode #skills-section h2 {
   color: #f5f5f5;
   border-bottom: 2px solid #555;
+}
+
+@media (max-width: 768px) {
+  /* Resume Section */
+  #resume {
+    margin: 10px; /* Reduce margins for smaller screens */
+    padding: 15px; /* Adjust padding for spacing */
+  }
+
+  /* Experience and Education Sections */
+  .experience, .education {
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Reduce spacing */
+  }
+  /* Skills Section */
+  .skills-container {
+    flex-direction: column; 
+    gap: 50px; 
+  }
+  .skill {
+    width: 120px; 
+    height: 160px;
+    text-align: center;
+  }
+  /* Adjust percentage font size */
+  #number-html, #number-css, #number-js {
+    font-size: 20px; /* Slightly smaller text */
+    text-align: center;
+  }
+  /* Inner text adjustments */
+  .inner h2 {
+    font-size: 14px; 
+    right: 0px;
+    text-align: center;
+    left: 0;
+    top: 160px;
+  }
+
+  /* Section Headings */
+  #experience-section h2,
+  #education-section h2,
+  #skills-section h2 {
+    font-size: 1.2rem; /* Smaller headings */
+  }
+
+
 }
 
 /* Contact Section (Initially Hidden) */
