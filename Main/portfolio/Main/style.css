@@ -33,8 +33,9 @@ body.light-mode {
 #logo img {
   max-width: 100%;
   height: auto;
-  max-width: 120px;
-  height:80px;
+  max-width: 125px;
+  height:50px;
+  padding:10px;
 }
 .profile-picture {
   width: 150px;
@@ -523,7 +524,7 @@ body.dark-mode #skills-section h2 {
 
 
 }
-
+  
 /* Contact Section (Initially Hidden) */
     #contact-section{
       display:none;
