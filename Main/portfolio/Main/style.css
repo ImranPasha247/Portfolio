@@ -101,16 +101,21 @@ body.light-mode {
     width: 90%; 
     text-align: center;
     margin: 0 ;
-    background-color: #1e1e1e;
-    color: #f1f1f1;
+  }
+  body.light-mode .Profile-contact-info p{
+    background: #e1e0e0;
+    color:#121212;
+  }
+  body:not(light-mode)  .Profile-contact-info p{
+    background: #1e1e1e;
+    color:#ffffff;
   }
 }
 
 /* Merge */
 .merge {
-  display: flex;
+  display:flex;
   justify-content: space-between;
-  align-items: center;
 }
 @media (max-width: 768px) {
   .merge {
@@ -528,6 +533,7 @@ body.dark-mode #skills-section h2 {
 /* Contact Section (Initially Hidden) */
     #contact-section{
       display:none;
+      margin-left:20px;
     }
 .contact-container {
       max-width: 800px;
