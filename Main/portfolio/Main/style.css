@@ -281,7 +281,7 @@ body.dark-mode .theme-toggle {
 
 /* Projects Section (Initially Hidden) */
 .projects-section {
-  display: none; 
+  display: block; 
   width: 100%;
   max-width: 1200px;
   text-align: center;
